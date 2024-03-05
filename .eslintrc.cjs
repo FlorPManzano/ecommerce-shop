@@ -24,6 +24,7 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-use-react': 'off',
-    'jsx-quotes': ['error', 'prefer-single']
+    'jsx-quotes': ['error', 'prefer-single'],
+    'react/prop-types': 'off'
   }
 }

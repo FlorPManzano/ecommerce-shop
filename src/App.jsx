@@ -19,7 +19,6 @@ function App () {
         <Sidebar />
         <Footer />
       </Router>
-
     </div>
   )
 }
