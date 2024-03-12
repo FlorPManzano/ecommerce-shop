@@ -15,9 +15,9 @@ const ProductProvider = ({ children }) => {
     fetchProducts()
   }, [])
   return (
-       <ProductContext.Provider value={{ products }}>
-        {children}
-       </ProductContext.Provider>
+    <ProductContext.Provider value={{ products }}>
+      {children}
+    </ProductContext.Provider>
   )
 }
 

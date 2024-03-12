@@ -9,8 +9,9 @@ const Header = () => {
       <div>Header</div>
       <div
         className='cursor-pointer flex relative'
-        onClick={() => setIsOpen(!isOpen)}>
-        <BsBag className='text-2xl'/>
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <BsBag className='text-2xl' />
       </div>
     </header>
   )
