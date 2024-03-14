@@ -20,14 +20,14 @@ const Header = () => {
   return (
     <header
       className={`${
-        isActive ? 'bg-white shadow-md' : 'bg-none'
-      } fixed w-full z-10 transition-all py-4`}
+        isActive ? 'bg-white/80 shadow-md' : 'bg-none'
+      } fixed w-full z-20 transition-all py-4`}
     >
-      <div className='container mx-auto flex items-center justify-between h-full'>
+      <div className='container mx-auto flex items-center justify-between h-full px-4'>
         {/* Logo */}
         <Link to={'/'}>
           <div>
-            <img className='w-[40px]' src={Logo} alt='Logo Ecommerce' />
+            <img className='w-[50px]' src={Logo} alt='Logo Ecommerce' />
           </div>
         </Link>
         {/* Cart */}
@@ -35,7 +35,7 @@ const Header = () => {
           className='cursor-pointer flex relative'
           onClick={() => setIsOpen(!isOpen)}
         >
-          <BsBag className='text-2xl' />
+          <BsBag className='text-3xl' />
           <div className='bg-red-500 absolute -right-2 -bottom-2 text-[12px]  w-[18px] h-[18px] text-white rounded-full flex justify-center items-center'>
             {itemAmount}
           </div>
