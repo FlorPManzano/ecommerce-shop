@@ -4,6 +4,7 @@ import { FiTrash2 } from 'react-icons/fi'
 import CartItem from '../components/CartItem'
 import { SidebarContext } from '../contexts/SidebarContext'
 import { CartContext } from '../contexts/CartContext'
+import { Link } from 'react-router-dom'
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext)
@@ -45,6 +46,19 @@ const Sidebar = () => {
             <FiTrash2 />
           </div>
         </div>
+        <Link
+          to='/'
+          className='bg-gray-200 flex p-4 justify-center items-center text-primary w-full font-medium'
+          onClick={handleClose}
+        >
+          Seguir comprando
+        </Link>
+        <Link
+          to='/'
+          className='bg-primary flex p-4 justify-center items-center text-white w-full font-medium'
+        >
+          Realizar pedido
+        </Link>
       </div>
     </div>
   )
