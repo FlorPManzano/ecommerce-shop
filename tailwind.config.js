@@ -4,7 +4,8 @@ export default {
   theme: {
     fontFamily: {
       primary: 'Poppins',
-      secondary: 'Archivo Black'
+      secondary: 'Archivo Black',
+      terciary: 'Dancing Script'
     },
     container: {
       padding: {

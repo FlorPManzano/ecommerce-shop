@@ -4,7 +4,7 @@ import { SidebarContext } from '../contexts/SidebarContext'
 import { CartContext } from '../contexts/CartContext'
 import { BsBag } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
-import Logo from '../assets/logo.svg'
+import Logo from '../components/Logo'
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false)
@@ -26,16 +26,32 @@ const Header = () => {
       <div className='container mx-auto flex items-center justify-between h-full px-4'>
         {/* Logo */}
         <Link to={'/'}>
-          <div>
-            <img className='w-[50px]' src={Logo} alt='Logo Ecommerce' />
+          <div className='flex items-center justify-center font-terciary text-5xl text-terciary relative'>
+            <Logo
+              color={`${isActive ? '#121212' : '#663B36'}`}
+              width='80'
+              height='80'
+            />
+            <p
+              className={`${
+                isActive ? 'text-primary' : 'text-terciary'
+              } absolute left-12 bottom-5`}
+            >
+              Larana
+            </p>
           </div>
         </Link>
+
         {/* Cart */}
         <div
           className='cursor-pointer flex relative'
           onClick={() => setIsOpen(!isOpen)}
         >
-          <BsBag className='text-3xl' />
+          <BsBag
+            className={`${
+              isActive ? 'text-primary' : 'text-terciary'
+            } text-3xl`}
+          />
           <div className='bg-red-500 absolute -right-2 -bottom-2 text-[12px]  w-[18px] h-[18px] text-white rounded-full flex justify-center items-center'>
             {itemAmount}
           </div>
